@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@500;700;800&display=swap');
+
+:root {
+    --Light-red: hsl(0, 100%, 67%);
+    --Orangey-yellow: hsl(39, 100%, 56%);
+    --Green-teal: hsl(166, 100%, 37%);
+    --Cobalt-blue: hsl(234, 85%, 45%);
+
+    --Light-slate-blue : hsl(252, 100%, 67%);
+    --Lightroyalblue : hsl(241, 81%, 54%);
+    --Violetblue : hsla(256, 72%, 46%, 1);
+    --Persian-blue : hsla(241, 72%, 46%, 0);
+
+    --White: hsl(0, 0%, 100%);
+    --Paleblue: hsl(221, 100%, 96%);
+    --Light-lavender: hsl(241, 100%, 89%);
+    --Darkgrayblue: hsl(224, 30%, 27%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 65.5%;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    max-width: 50rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: var(--Paleblue) 0px 8px 24px;
+}
+
+.left-col {
+    background: linear-gradient(0deg, var(--Lightroyalblue) 0%, var(--Violetblue) 50%, var(--Light-slate-blue) 90%);
+    border-radius: 1rem;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.result-heading {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: hsla(222, 100%, 96%, 0.411);
+}
+
+.count {
+    background: linear-gradient(180deg, var(--Lightroyalblue) 0%, var(--Violetblue) 50%, var(--Light-slate-blue) 90%);
+    padding: 3rem 4rem;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.count-score {
+    font-size: 4rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.count-final {
+    color: var(--Light-lavender);
+}
+
+.score-detail {
+    text-align: center;
+}
+
+.detail-text {
+    font-size: 1.8rem;
+    color: var(--White);
+    margin-bottom: 1rem;
+}
+
+.detail-details {
+    font-size: 1.2rem;
+    color: hsla(222, 100%, 96%, 0.411);
+}
+
+.right-col {
+    border-radius: 1rem;
+    padding: 3.3rem 2.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+.right-col span {
+    color: hsla(224, 30%, 27%, 0.39);
+}
+
+.reaction {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsla(0, 100%, 67%, 0.247);
+    border-radius: 1rem;
+}
+
+.reaction-score,
+.memory-score,
+.verbal-score,
+.visual-score {
+    padding-left: 2rem;
+}
+
+.reaction-text,
+.reaction-score,
+.memory-text,
+.memory-score,
+.verbal-text,
+.verbal-score,
+.visual-text,
+.visual-score {
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.reaction-text {
+    color: var(--Light-red);
+}
+
+.memory {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsla(39, 100%, 56%, 0.247);
+    border-radius: 1rem;
+}
+
+.memory-text {
+    color: hsl(39, 100%, 56%);
+}
+
+.verbal {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsla(166, 100%, 37%, 0.247);
+    border-radius: 1rem;
+}
+
+.verbal-text {
+    color: var(--Green-teal);
+}
+
+.visual {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr;
+    align-items: center;
+    padding: 1rem;
+    background-color: hsla(234, 85%, 45%, 0.247);
+    border-radius: 1rem;
+}
+.visual-text {
+    color: var(--Cobalt-blue);
+}
+
+.btn {
+    margin-top: 1rem;
+    width: 100%;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    padding: 1rem;
+    border-radius: 2rem;
+    background-color: var(--Darkgrayblue);
+    transition: all .3s;
+}
+
+.btn:hover {
+    background-color: var(--Violetblue);
+    color: #fff;
+}
+
+@media (max-width: 492px) {
+    .container {
+        max-width: 30rem;
+        grid-template-columns: 1fr;
+    }
+}
